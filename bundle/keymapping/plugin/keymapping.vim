@@ -1,5 +1,5 @@
-imapclear
-nmapclear
+"imapclear
+"nmapclear
 
 " Move one line Up
 
@@ -62,14 +62,26 @@ vnoremap L $
 onoremap L $
 
 " Scroll up half a screen.
+
 nnoremap H <C-u>
 vnoremap H <C-u>
 onoremap H <C-u>
 
 " Scroll down half a screen.
+
 nnoremap K <C-d>
 vnoremap K <C-d>
 onoremap K <C-d>
+
+" Join (Combine) the current line with the line below.
+
+nnoremap c J
+vnoremap c J
+
+" Join (Combine) the current line with the line above.
+
+nnoremap C <Up>J
+vnoremap C J
 
 " New line below
 
