@@ -47,6 +47,57 @@ set listchars=trail:·,precedes:«,extends:»,tab:▸-
 " eol:↲
 
 """""""""""""""""""""""""""""""""""""""""
+"  Convert tabs to spaces
+
+set expandtab
+set tabstop=2
+
+"""""""""""""""""""""""""""""""""""""""""
+" Display line numbers
+
+set number
+
+"""""""""""""""""""""""""""""""""""""""""
+" Search / Regular Expressions
+
+" Wrap around the end of the file when searching.
+set wrapscan
+
+" Highlight search matches.
+set hlsearch
+
+" Search as you type.
+set incsearch
+
+" Ignore case in the search pattern.
+set ignorecase
+
+" Override the "ignorecase" option if the search pattern contains uppercase
+" letters.
+set smartcase
+
+" In regular expressions, treat most characters literally, while require
+" certain ones to be preceded with backward slash "\" in order to gain special
+" meaning.
+set magic
+
+"""""""""""""""""""""""""""""""""""""""""
+"      GUI MODE for gvim
+
+if has("gui_running")
+  set background=dark
+  colorscheme solarized
+  set guifont=Droid\ Sans\ Mono\ 14
+  set guifont=Ubuntu\ Mono\ 14
+
+  " remove menu and toolbar
+  set guioptions -=m
+  set guioptions -=T
+
+  map <Leader>bg :let &background = (&background == "dark" ? "light" : "dark")<CR>
+
+endif
+
 """""""""""""""""""""""""""""""""""""""""
 " NERD Tree
 
