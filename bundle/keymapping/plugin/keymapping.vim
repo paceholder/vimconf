@@ -20,9 +20,9 @@ vnoremap j h
 onoremap j h
 
 " Move one character Right
-nnoremap l n
-vnoremap l n
-onoremap l n
+nnoremap l l
+vnoremap l l
+onoremap l l
 
 " Move forward to the beginning of a word
 
