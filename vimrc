@@ -114,7 +114,7 @@ noremap CC :call NERDComment(0, "toggle")<CR>
 
 """""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""
- "delimitMate
+" delimitMate
 
  "let g:delimitMate_excluded_regions = ''
 
@@ -130,4 +130,22 @@ let g:delimitMate_expand_space = 1
 " vim-airline
 
 set laststatus=2
+
+
+"""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""
+" "fswitch"
+
+autocmd BufEnter *.hpp let b:fswitchdst = 'cpp,c++,cxx,cc,c'
+autocmd BufEnter *.cpp let b:fswitchdst = 'hpp,h++,hxx,hh,h'
+
+autocmd BufEnter *.hpp,*.h++,*.hxx,*.hh,*.h let b:fswitchlocs = 'reg:/include/src/'
+autocmd BufEnter *.cpp,*.c++,*.cxx,*.cc,*.c let b:fswitchlocs = 'reg:/src/include/'
+
+
+nnoremap <silent> <Leader>s :up<CR>:FSHere<CR>
+
+
+
+
 
