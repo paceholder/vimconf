@@ -57,6 +57,30 @@ set tabstop=2
 
 set number
 
+
+"""""""""""""""""""""""""""""""""""""""""
+" Swap and backup
+
+set writebackup
+
+set backup
+
+set backupcopy=yes
+
+set backupskip=
+
+set backupdir=~/.backup
+
+autocmd BufWritePre * let &backupext = '~@'
+    \ . substitute(expand('%:p:h'), '[\\/:]', '%', 'g')
+
+set swapfile
+
+set updatetime=2000
+
+set directory=~/.swap//
+
+
 """""""""""""""""""""""""""""""""""""""""
 " Search / Regular Expressions
 
