@@ -2,7 +2,8 @@
 "  Runtime path for VIM plugins and scripts
 
 set runtimepath=/usr/share/vim/vim80
-set runtimepath+=~/vimconfig
+set runtimepath+=~/vimconf
+set runtimepath+=~/vimconf/after
 
 """"""""""""""""""""""""""""""""""""""""""
 
