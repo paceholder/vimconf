@@ -106,3 +106,12 @@ nnoremap a I
 " Redo
 
 nnoremap U <C-r>
+
+" Break the current line and move to the next one.
+
+nnoremap <CR>   i<CR><Esc><Right>
+nnoremap <S-CR> a<CR><Esc><Right>
+
+" Break the current line and stay on it.
+
+inoremap <S-CR> <CR><Esc><Up>A
