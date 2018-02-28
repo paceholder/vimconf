@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""
 "  Runtime path for VIM plugins and scripts
 
-set runtimepath=/usr/share/vim/vim80
+set runtimepath=/usr/share/vim/vim74
 set runtimepath+=~/vimconf
 set runtimepath+=~/vimconf/after
 
@@ -25,6 +25,19 @@ call pathogen#helptags()
 
 filetype plugin indent on
 syntax on
+
+""""""""""""""""""""""""""""""""""""""""""
+" For some simple "fuzzy" search
+
+set path+=**
+
+set wildmenu
+
+""""""""""""""""""""""""""""""""""""""""""
+" CTAGS
+
+command! MakeTags !ctags -R .
+
 
 """"""""""""""""""""""""""""""""""""""""""
 
