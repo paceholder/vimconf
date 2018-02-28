@@ -25,3 +25,6 @@
 [submodule "bundle/vim-uncrustify"]
 	path = bundle/vim-uncrustify
 	url = https://github.com/cofyc/vim-uncrustify.git
+[submodule "bundle/gruvbox"]
+	path = bundle/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
