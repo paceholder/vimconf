@@ -22,3 +22,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/vim-uncrustify"]
+	path = bundle/vim-uncrustify
+	url = https://github.com/cofyc/vim-uncrustify.git
