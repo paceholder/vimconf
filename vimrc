@@ -123,6 +123,10 @@ if has("gui_running")
 
 endif
 
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
 """""""""""""""""""""""""""""""""""""""""
 " NERD Tree
 
