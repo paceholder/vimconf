@@ -181,8 +181,8 @@ set laststatus=2
 autocmd BufEnter *.hpp let b:fswitchdst = 'cpp,c++,cxx,cc,c'
 autocmd BufEnter *.cpp let b:fswitchdst = 'hpp,h++,hxx,hh,h'
 
-autocmd BufEnter *.hpp,*.h++,*.hxx,*.hh,*.h let b:fswitchlocs = 'reg:/include/src/'
-autocmd BufEnter *.cpp,*.c++,*.cxx,*.cc,*.c let b:fswitchlocs = 'reg:/src/include/'
+autocmd BufEnter *.hpp,*.h++,*.hxx,*.hh,*.h let b:fswitchlocs = 'reg:/include/src/,reg:/include.*/src/'
+autocmd BufEnter *.cpp,*.c++,*.cxx,*.cc,*.c let b:fswitchlocs = 'reg:/src/include/,reg:|src|include/**|'
 
 
 nnoremap <silent> <Leader>s :up<CR>:FSHere<CR>
