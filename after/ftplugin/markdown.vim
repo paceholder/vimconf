@@ -14,3 +14,10 @@ setlocal cindent
 " r - insert the current comment leader after hitting enter in insert mode
 
 set formatoptions=cqr
+
+
+""""""""""""""""""""""""""""""""""""""
+" Spell Check
+
+set spelllang=en
+setlocal spell
