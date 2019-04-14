@@ -1,9 +1,10 @@
 """"""""""""""""""""""""""""""""""""""""""
 "  Runtime path for VIM plugins and scripts
 
-set runtimepath=/usr/share/vim/vim80
+set runtimepath=/usr/share/vim/vim81
 set runtimepath+=~/vimconf
 set runtimepath+=~/vimconf/after
+set rtp^=/vimconf
 
 """"""""""""""""""""""""""""""""""""""""""
 
@@ -124,9 +125,9 @@ set magic
 
 if has("gui_running")
   set background=dark
-  colorscheme solarized
-  set guifont=Droid\ Sans\ Mono\ 14
-  set guifont=Ubuntu\ Mono\ 14
+  colorscheme gruvbox
+  set guifont=Droid\ Sans\ Mono\ 12
+  set guifont=Ubuntu\ Mono\ 12
 
   " remove menu and toolbar
   set guioptions -=m
