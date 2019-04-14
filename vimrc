@@ -165,6 +165,7 @@ noremap CC :call NERDComment(0, "toggle")<CR>
 
 let g:delimitMate_balance_matchpairs = 1
 
+set backspace=2
 let g:delimitMate_expand_cr    = 1
 let g:delimitMate_expand_space = 1
 
@@ -194,5 +195,6 @@ nnoremap <silent> <Leader>s :up<CR>:FSHere<CR>
 " YouCompleteMe
 
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_confirm_extra_conf = 0
 
 
