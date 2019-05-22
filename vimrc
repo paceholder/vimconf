@@ -148,6 +148,9 @@ if has("gui_running")
 
 endif
 
+set background=dark
+colorscheme gruvbox
+
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
