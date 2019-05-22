@@ -203,3 +203,14 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_confirm_extra_conf = 0
 
 
+"""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""
+" CtrlP
+
+let g:ctrlp_max_files=0
+
+if executable('rg')
+  let g:ctrlp_user_command = 'rg %s --files --hidden --color=never --glob ""'
+endif
+
+let g:ctrlp_custom_ignore = 'lib\/'
