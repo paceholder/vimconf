@@ -2,6 +2,8 @@
 "  Runtime path for VIM plugins and scripts
 
 set runtimepath=/usr/share/vim/vim81
+set runtimepath+=/usr/share/vim/vim80
+set runtimepath+=~/installed/share/vim/vim80
 set runtimepath+=~/vimconf
 set runtimepath+=~/vimconf/after
 set rtp^=/vimconf
@@ -140,6 +142,9 @@ endif
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
+
+set background=dark
+colorscheme gruvbox
 
 """""""""""""""""""""""""""""""""""""""""
 " NERD Tree
