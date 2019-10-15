@@ -98,6 +98,14 @@ set updatetime=2000
 set directory=~/.swap//
 
 
+
+"""""""""""""""""""""""""""""""""""""""""
+" Search and scrolling
+
+" Scroll offset. Try to keep the cursor in the middle of the screen
+set scrolloff=50
+
+
 """""""""""""""""""""""""""""""""""""""""
 " Search / Regular Expressions
 
