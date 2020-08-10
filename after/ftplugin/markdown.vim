@@ -15,7 +15,7 @@ setlocal cindent
 
 set formatoptions=cqrt
 
-set tw=81
+set tw=71
 set colorcolumn=+1
 
 

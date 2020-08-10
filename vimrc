@@ -68,6 +68,7 @@ set listchars=trail:·,precedes:«,extends:»,tab:▸-
 
 set expandtab
 set tabstop=2
+set sw=2
 
 """""""""""""""""""""""""""""""""""""""""
 " Display line numbers

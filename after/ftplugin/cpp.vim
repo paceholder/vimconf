@@ -15,6 +15,8 @@ setlocal cindent
 
 set formatoptions=cqr
 
+set tw=71
+set colorcolumn=+1
 
 autocmd FileType cpp noremap <buffer> <F8> :call Uncrustify('cpp')<CR>
 autocmd FileType cpp vnoremap <buffer> <F8> :call RangeUncrustify('cpp')<CR>
