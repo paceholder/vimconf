@@ -3,7 +3,7 @@
 
 set runtimepath+=/usr/share/vim/vim81
 set runtimepath+=/usr/share/vim/vim80
-set runtimepath+=~/installed/share/vim/vim80
+set runtimepath+=/u/cd2zyg/installed/share/vim/vim82
 set runtimepath+=~/vimconf
 set runtimepath+=~/vimconf/after
 set rtp^=/vimconf
@@ -104,7 +104,7 @@ set directory=~/.swap//
 " Search and scrolling
 
 " Scroll offset. Try to keep the cursor in the middle of the screen
-set scrolloff=50
+"set scrolloff=50
 
 
 """""""""""""""""""""""""""""""""""""""""
@@ -148,12 +148,9 @@ if has("gui_running")
 
 endif
 
-set background=dark
-colorscheme gruvbox
-
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-endif
+" if $COLORTERM == 'gnome-terminal'
+"  set t_Co=256
+" endif
 
 set background=dark
 colorscheme gruvbox
@@ -226,3 +223,7 @@ if executable('rg')
 endif
 
 let g:ctrlp_custom_ignore = 'lib\/'
+
+let g:ctrlp_working_path_mode = 'ra'
+
+let g:ctrlp_cache_dir = '~/.cache/ctrlp'
