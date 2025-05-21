@@ -8,6 +8,8 @@ set runtimepath+=~/vimconf
 set runtimepath+=~/vimconf/after
 set rtp^=/vimconf
 
+set tabpagemax=1000
+
 """"""""""""""""""""""""""""""""""""""""""
 
 set nocompatible
@@ -197,8 +199,8 @@ set laststatus=2
 autocmd BufEnter *.hpp let b:fswitchdst = 'cpp,c++,cxx,cc,c'
 autocmd BufEnter *.cpp let b:fswitchdst = 'hpp,h++,hxx,hh,h'
 
-autocmd BufEnter *.hpp,*.h++,*.hxx,*.hh,*.h let b:fswitchlocs = 'reg:/include/src/,reg:/include.*/src/'
-autocmd BufEnter *.cpp,*.c++,*.cxx,*.cc,*.c let b:fswitchlocs = 'reg:/src/include/,reg:|src|include/**|'
+autocmd BufEnter *.hpp,*.h++,*.hxx,*.hh,*.h let b:fswitchlocs = 'reg:/include/src/,reg:/inc/src/'
+autocmd BufEnter *.cpp,*.c++,*.cxx,*.cc,*.c let b:fswitchlocs = 'reg:/src/include/,reg:/src/inc/'
 
 
 nnoremap <silent> <Leader>s :up<CR>:FSHere<CR>
@@ -209,8 +211,7 @@ nnoremap <silent> <Leader>s :up<CR>:FSHere<CR>
 " YouCompleteMe
 
 let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_confirm_extra_conf = 0
-
+let g:ycm_clangd_args = ['--clang-tidy']
 
 """""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""
