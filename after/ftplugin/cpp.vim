@@ -20,3 +20,18 @@ set colorcolumn=+1
 
 autocmd FileType cpp noremap <buffer> <F8> :call Uncrustify('cpp')<CR>
 autocmd FileType cpp vnoremap <buffer> <F8> :call RangeUncrustify('cpp')<CR>
+
+
+
+
+
+function FormatBuffer()
+  if &modified && !empty(findfile('.clang-format', expand('%:p:h') . ';'))
+    let cursor_pos = getpos('.')
+    :%!clang-format
+    call setpos('.', cursor_pos)
+  endif
+endfunction
+
+autocmd FileType cpp noremap <buffer> <F9> :call FormatBuffer()<CR>
+"autocmd FileType cpp vnoremap <buffer> <F9> :call FormatBuffer()<CR>
