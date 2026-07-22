@@ -215,9 +215,10 @@ let g:ycm_clangd_args = ['--clang-tidy']
 " CtrlP
 
 let g:ctrlp_max_files=0
+let g:ctrlp_lazy_update = 150
 
 if executable('rg')
-  let g:ctrlp_user_command = 'rg %s --files --hidden --color=never --glob ""'
+  let g:ctrlp_user_command = 'rg %s --files --hidden --color=never'
 endif
 
 let g:ctrlp_custom_ignore = 'lib\/'
