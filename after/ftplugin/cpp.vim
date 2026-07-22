@@ -37,7 +37,9 @@ function! s:SetFswitchLocs() abort
     endif
 endfunction
 
-autocmd BufEnter <buffer> call s:SetFswitchLocs()
+augroup fswitch_cpp
+    autocmd! BufEnter <buffer> call s:SetFswitchLocs()
+augroup END
 call s:SetFswitchLocs()
 
 """""""""""""""""""""""""""""""""""""""
@@ -60,8 +62,8 @@ set formatoptions=cqr
 set tw=81
 set colorcolumn=+1
 
-autocmd FileType cpp noremap <buffer> <F8> :call Uncrustify('cpp')<CR>
-autocmd FileType cpp vnoremap <buffer> <F8> :call RangeUncrustify('cpp')<CR>
+noremap <buffer> <F8> :call Uncrustify('cpp')<CR>
+vnoremap <buffer> <F8> :call RangeUncrustify('cpp')<CR>
 
 
 
@@ -75,5 +77,5 @@ function FormatBuffer()
   endif
 endfunction
 
-autocmd FileType cpp noremap <buffer> <F9> :call FormatBuffer()<CR>
+noremap <buffer> <F9> :call FormatBuffer()<CR>
 "autocmd FileType cpp vnoremap <buffer> <F9> :call FormatBuffer()<CR>

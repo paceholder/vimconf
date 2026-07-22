@@ -26,7 +26,9 @@ function! s:SetFswitchLocsHeader() abort
     endif
 endfunction
 
-autocmd BufEnter <buffer> call s:SetFswitchLocsHeader()
+augroup fswitch_c
+    autocmd! BufEnter <buffer> call s:SetFswitchLocsHeader()
+augroup END
 call s:SetFswitchLocsHeader()
 
 """""""""""""""""""""""""""""""""""""""
