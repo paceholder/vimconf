@@ -34,8 +34,6 @@ syntax on
 """"""""""""""""""""""""""""""""""""""""""
 " For some simple "fuzzy" search
 
-set path+=**
-
 set wildmenu
 
 """"""""""""""""""""""""""""""""""""""""""
@@ -131,7 +129,6 @@ set smartcase
 " In regular expressions, treat most characters literally, while require
 " certain ones to be preceded with backward slash "\" in order to gain special
 " meaning.
-set magic
 
 """""""""""""""""""""""""""""""""""""""""
 "      GUI MODE for gvim
