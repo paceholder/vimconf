@@ -57,10 +57,10 @@ setlocal cindent
 " automatically
 " r - insert the current comment leader after hitting enter in insert mode
 
-set formatoptions=cqr
+setlocal formatoptions=cqr
 
-set tw=81
-set colorcolumn=+1
+setlocal tw=81
+setlocal colorcolumn=+1
 
 noremap <buffer> <F8> :call Uncrustify('cpp')<CR>
 vnoremap <buffer> <F8> :call RangeUncrustify('cpp')<CR>

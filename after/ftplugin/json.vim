@@ -13,16 +13,16 @@ setlocal cindent
 " automatically
 " r - insert the current comment leader after hitting enter in insert mode
 
-set formatoptions=cqrt
+setlocal formatoptions=cqrt
 
-set tw=71
-set colorcolumn=+1
+setlocal tw=71
+setlocal colorcolumn=+1
 
 
 """"""""""""""""""""""""""""""""""""""
 " Spell Check
 
-set spelllang=en
+setlocal spelllang=en
 setlocal nocindent
 setlocal spell
 

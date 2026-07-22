@@ -13,5 +13,5 @@ setlocal cindent
 " automatically
 " r - insert the current comment leader after hitting enter in insert mode
 
-set formatoptions=cqr
+setlocal formatoptions=cqr
 
