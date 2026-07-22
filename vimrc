@@ -200,11 +200,7 @@ set laststatus=2
 """""""""""""""""""""""""""""""""""""""""
 " "fswitch"
 
-autocmd BufEnter *.hpp let b:fswitchdst = 'cpp,c++,cxx,cc,c'
-autocmd BufEnter *.cpp let b:fswitchdst = 'hpp,h++,hxx,hh,h'
-
-autocmd BufEnter *.hpp,*.h++,*.hxx,*.hh,*.h let b:fswitchlocs = 'reg:/include/src/,reg:/inc/src/'
-autocmd BufEnter *.cpp,*.c++,*.cxx,*.cc,*.c let b:fswitchlocs = 'reg:/src/include/,reg:/src/inc/'
+" fswitch locations are set dynamically in after/ftplugin/cpp.vim and c.vim
 
 
 nnoremap <silent> <Leader>s :up<CR>:FSHere<CR>

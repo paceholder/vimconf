@@ -1,3 +1,34 @@
+""""""""""""""""""""""""""""""""""""""
+" fswitch: dynamic header<->source switching
+"
+" Layout variants handled:
+"   module/inc/Foo.h          <->  module/src/Foo.cpp
+"   module/include/Foo.h      <->  module/src/Foo.cpp
+"   module/include/<mod>/Foo.h <-> module/src/Foo.cpp
+"   module/include/Foo.h      <->  module/Foo.cpp  (no src subdir)
+
+function! s:SetFswitchLocsHeader() abort
+    let dir = expand('%:p:h')
+    let tail = fnamemodify(dir, ':t')
+    let parent = fnamemodify(dir, ':h:t')
+    let b:fswitchdst = 'cpp,c++,cxx,cc,c'
+    if tail ==# 'inc'
+        " module/inc/ -> module/src/
+        let b:fswitchlocs = 'reg:/inc$/src/,.'
+    elseif tail ==# 'include'
+        " module/include/ -> module/src/ or module/ (no src)
+        let b:fswitchlocs = 'reg:/include$/src/,rel:..,.'
+    elseif parent ==# 'include'
+        " module/include/<mod>/ -> module/src/
+        let b:fswitchlocs = 'reg:/include/' . tail . '$/src/,.'
+    else
+        let b:fswitchlocs = '.'
+    endif
+endfunction
+
+autocmd BufEnter <buffer> call s:SetFswitchLocsHeader()
+call s:SetFswitchLocsHeader()
+
 """""""""""""""""""""""""""""""""""""""
 " Indentation
 
